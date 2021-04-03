@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Cat Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ r.name }}</span>
+    <p>Cuisine: {{ r.cuisine }}</p>
+    <p>Description: {{ r.description }}</p>
+    {% if r.capacity > 0 %}
+      <p>Capacity: {{ r.capacity }}</p>
+    {% else %}
+      <p>Capacity: Unknown</p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" action="/restaurants/submit_create_form">
+    {% csrf_token %}
+    Name: <input name="name" />
+    Cuisine: <input name="cuisine" />
+    Description: <input name="description" />
+    Capacity: <input type="number" name="capacity" />
+    <button>Add Restaurant</button>
+</form>
+{% endblock %}
