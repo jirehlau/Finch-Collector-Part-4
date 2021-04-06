@@ -54,3 +54,8 @@ def restaurants_index(request):
 def restaurants_detail(request, r_id):
   r = Restaurant.objects.get(id=r_id)
   return render(request, 'restaurants/detail.html', { 'r': r })
+
+def reviews(request, r_id):
+  r = Restaurant.objects.get(id=r_id)
+  restaurants = r.reviews_set.all()
+  print(reviews)
